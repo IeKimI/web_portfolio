@@ -1,115 +1,67 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import "tailwindcss/tailwind.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <div className="sticky bg-white top-10 w-2/3 h-14 pl-0 pr-0 shadow-[0px_10px_15px_-3px_rgba(60,60,60,0.5)] rounded-full mt-10">
+        <ul className="items-center flex justify-between my-4 px-10">
+          <li class="nav-item active font-bold">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/posts/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="/articles">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
       <Head>
-        <title>Create Next App</title>
+        <title>Eri Kim</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="flex mx-60 itmes-center justify-between mt-24">
+        <div className="flex items-start flex-col">
+          <h1 className="flex items-start text-5xl font-bold pt-10">Eri Kim</h1>
+          <h2 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-black pr-5 text-3xl text-black">
+            Software Engineer | Data Scientist
+          </h2>
+          <p className="mt-4 text-1xl">
+            I am a software engineer II and data scientist with expertise in
+            full-stack development. <br></br> I enjoy solving complex problems
+            and learning new skills. I am passionate about creating high-quality
+            code that follows best practices and industry standards. I am always
+            looking for new challenges and opportunities to grow as a developer.
+          </p>
         </div>
-      </main>
+        <div className="flex items-center ">
+          <img
+            src="/images/home.png"
+            alt="..."
+            class="max-w-full h-auto align-middle border-none"
+          />
+        </div>
+      </div>
 
-      <footer>
+      <footer className="fixed bottom-10">
+        <hr className="w-full" />
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          Created by Eri Kim
         </a>
       </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
-  )
+  );
 }
