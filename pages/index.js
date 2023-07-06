@@ -5,8 +5,8 @@ import "tailwindcss/tailwind.css";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <div className="sticky bg-white top-10 w-2/3 h-14 pl-0 pr-0 shadow-[0px_10px_15px_-3px_rgba(60,60,60,0.5)] rounded-full mt-10">
-        <ul className="items-center flex justify-between my-4 px-10">
+      <div className="sticky bg-white top-20 w-2/3 h-14 pl-0 pr-0 shadow-[0px_10px_15px_-3px_rgba(60,60,60,0.5)] rounded-full mt-10">
+        <ul className="items-center flex justify-between my-4 px-16">
           <li class="nav-item active font-bold">
             <a href="/">Home</a>
           </li>
@@ -28,7 +28,7 @@ export default function Home() {
         <title>Eri Kim</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex mx-60 itmes-center justify-between mt-24">
+      <div className="flex mx-60 itmes-center justify-between my-24 grow">
         <div className="flex items-start flex-col">
           <h1 className="flex items-start text-5xl font-bold pt-10">Eri Kim</h1>
           <h2 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-black pr-5 text-3xl text-black">
@@ -36,8 +36,8 @@ export default function Home() {
           </h2>
           <p className="mt-4 text-1xl">
             I am a software engineer II and data scientist with expertise in
-            full-stack development. <br></br> I enjoy solving complex problems
-            and learning new skills. I am passionate about creating high-quality
+            full-stack development. <br /> I enjoy solving complex problems and
+            learning new skills. I am passionate about creating high-quality
             code that follows best practices and industry standards. I am always
             looking for new challenges and opportunities to grow as a developer.
           </p>
@@ -67,7 +67,10 @@ export default function Home() {
               stroke-linejoin="round"
             >
               {" "}
-              <a href="https://github.com/IeKimI" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/eri-kim-8181341b5/"
+                target="_blank"
+              >
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />{" "}
                 <rect x="2" y="9" width="4" height="12" />{" "}
                 <circle cx="4" cy="4" r="2" />
@@ -76,14 +79,14 @@ export default function Home() {
             <svg
               class="h-12 w-12 mr-3 text-white"
               viewBox="0 0 24 24"
-              fill="white"
+              fill="black"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
               {" "}
-              <a href="https://github.com/IeKimI" target="_blank">
+              <a href="mailto:erikim0413@gmail.com" target="_blank">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />{" "}
                 <polyline points="22,6 12,13 2,6" />
               </a>
@@ -137,12 +140,17 @@ export default function Home() {
               </div>
             </a>
           </div> */}
+          <a href="/images/resume.pdf" download>
+            <button class="bg-white hover:bg-gray-700 hover:text-white text-black font-bold py-2 px-4 rounded-full shadow-lg mt-5">
+              Download Resume
+            </button>
+          </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center justify-end w-full">
           <img
-            src="/images/home.png"
+            src="/images/profile.jpg"
             alt="..."
-            class="max-w-full h-auto align-middle border-none"
+            class="align-middle rounded-full justify-end"
           />
         </div>
       </div>
